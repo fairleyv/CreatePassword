@@ -1,0 +1,54 @@
+header h1 {
+    font-weight: bolder;
+    text-align: center;
+    text-decoration-line: underline;
+}
+main {
+    display: flex;
+    justify-content: center;
+}
+
+.mainContainer {
+    box-shadow: inset 1px 1px 2px grey;
+    min-width: 40rem;
+    min-height:20rem;
+    border: lightgrey solid 5px;
+}
+
+.mainContainer h3 {
+    margin-left: 50px;
+    font-size: 1.5em;
+}
+
+.secondaryContainer {
+    border-top: lightgrey 2px solid;
+    border-bottom: lightgrey 2px solid;
+    margin: 30px;
+}
+
+.passwordContainer {
+    display: flex;
+    justify-content: center;
+    border: darkgrey dotted 3px;
+    min-width: 5rem;
+    min-height: 15rem;
+    margin: 20px;
+    color: darkgrey;
+
+}
+.button {
+    display:flex;
+    justify-content: center;
+
+}
+
+.passwordButton {
+    background-color: red;
+    border-radius: 40px;
+    color: white;
+    width:10rem;
+    height: 3rem;
+    text-align: center;
+    margin-bottom: 8px;
+    
+}
