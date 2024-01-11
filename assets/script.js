@@ -127,44 +127,36 @@ function checkPassword() {
 
     if (parameters.lowercase == true) {
         for (let i=0; i<password.length; i++) {
-            console.log(password[i])
-            if (password[i] in lowercase) {
+            if (lowercase.includes(password[i])) {
                 lowercaseTest = true;
             }
         }
     }
     if (parameters.uppercase == true) {
         for (let i = 0; i < password.length; i++) {
-            if (password[i] in uppercase) {
+            if (uppercase.includes(password[i])) {
                 uppercaseTest = true;
             }
         }
     }
     if (parameters.numeric == true) {
         for (let i = 0; i<password.length; i++) {
-            if (password[i] in numeric) {
+            if (numeric.includes(password[i])) {
                 numericTest = true;
             }
         }
     }
     if (parameters.specialCharacter == true) {
         for (let i = 0; i<password.length; i++) {
-            if (password[i] in specialCharacter) {
+            if (specialCharacter.includes(password[i])) {
                 specialCharacterTest = true;
             }
         }
     }
     if (parameters.lowercase == lowercaseTest && parameters.uppercase == uppercaseTest && parameters.numeric == numericTest && parameters.specialCharacter == specialCharacterTest) {
         alert("Success!");
-        console.log("lowercase: " + parameters.lowercase + "lowercaseTest: " + lowercaseTest + "uppercase: " + parameters.uppercase + "uppercaseTest: " + uppercaseTest + " numeric" + parameters.numeric + "numericTest: " + numericTest + "specialCharacter" + parameters.specialCharacter + " specialcharactertest: " + specialCharacterTest)
-
     } else {
-        if (confirm("Failed...try again?")){
-            console.log("lowercase: " + parameters.lowercase + "lowercaseTest: " + lowercaseTest  + " numericTest: " + numericTest + " specialcharactertest: " + specialCharacterTest)
             createPassword();
-        } else{
-            return
-        }
     }
 }
 // create a function that checks to see if the password contains at least 1 element of each parameter.
