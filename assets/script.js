@@ -28,7 +28,11 @@ function getRandomInt(max) {
 }
 
 // create functions that determine the parameters for the password
+exit = false
+
 function setSpecialCharacter() {
+    exit = false;
+
     if (confirm("Include special characters in Password?")) {
         parameters.specialCharacter=true;
     } else {
@@ -43,8 +47,11 @@ function setSpecialCharacter() {
             alert("Generating Password");
         }
     } else {
-        alert("Try Again");
-        setParameters();
+        if (confirm("Try Again?")) {
+            setParameters();
+        } else {
+            exit = true;
+        }
     }
 }
 
@@ -99,6 +106,9 @@ function displayPassword() {
 
 function createPassword() {
     password ="";
+    if (exit == true) {
+        return
+    }
 
     if (parameters.lowercase == true) {
         tempParameterList=tempParameterList.concat(lowercase);
